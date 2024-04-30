@@ -9,33 +9,33 @@ font-family: Montserrat, sans-serif;
 }
 
     .faq-container {
-        width: 80%;
-        margin: 30px auto;
+        width: 100%;
+        margin: 0 auto;
         background-color: white;
-        padding: 35px;
-        border-radius: 20px;
+        padding: 5px;
+        border-radius: 0px;
     }
 
     .faq-question {
   display: flex;
         justify-content: space-between;
-  		align-items: left;
-  		font-family: Montserrat, sans-serif;
+        align-items: left;
+        font-family: Montserrat, sans-serif;
         font-weight: bold;
         cursor: pointer;
-        padding: 15px;
-  		color: #000;
+        padding: 25px;
+        color: #000;
         cursor: pointer;
-        padding: 15px;
+        padding: 25px;
         border: 1px solid #D1D1D1;
-        border-radius: 15px;
+        border-radius: 0px;
         margin: 5px 0;
         text-align: center;
         width: 100%;
-        background-color: #1c91ff;
-       	outline: none;
-		font-size: 14px;
-      	margin-bottom: 2px; /* Añadido espacio entre cada pestaña */
+        background-color: #FAFAFA;
+        outline: none;
+        font-size: 14px;
+        margin-bottom: 2px; /* Added space between each tab */
     }
 
     .faq-answer {
@@ -45,10 +45,15 @@ font-family: Montserrat, sans-serif;
     }
 
     .faq-container .dropdown-arrow {
-        color: white;
+        color: #967E2D;
         float: right;
         margin-top: 2px;
         margin-right: 5px;
+        transition: transform 0.3s; /* Smooth transition for rotation */
+    }
+
+    .faq-container .open .dropdown-arrow {
+        transform: rotate(180deg); /* Rotate the arrow icon when tab is open */
     }
 
     @media (max-width: 768px) {
@@ -62,43 +67,57 @@ font-family: Montserrat, sans-serif;
 <body>
 
 <div class="faq-container">
-<button class="faq-question" onclick="toggleFAQ(1)">1) Resistente & Duradera<span class="dropdown-arrow">▼</span></button>
+<button class="faq-question" onclick="toggleFAQ(1)"><span class="tab-text">1) Resistente y Duradera</span><span class="dropdown-arrow">▼</span></button>
 <div class="faq-answer">
 Las tarjetas de presentación digitales no se deterioran con el tiempo, al contrario de lo que ocurre con las de papel. Siempre se mantienen en perfecto estado. 
-  
+</div>
 
-   <button class="faq-question" onclick="toggleFAQ(2)">2) Ecológica & Sostenible<span class="dropdown-arrow">▼</span></button>
-  <div class="faq-answer">
+<button class="faq-question" onclick="toggleFAQ(2)"><span class="tab-text">2) Ecológica y Sostenible</span><span class="dropdown-arrow">▼</span></button>
+<div class="faq-answer">
     <p>
-Las tarjetas de presentación digitales son ecológicas y contribuyen a reducir la huella de carbono, ya que no se necesitan insumos de papel ni tinta para su producción.  </div>
-  
-  
-<button class="faq-question" onclick="toggleFAQ(3)">3) Efectiva & Completa<span class="dropdown-arrow">▼</span></button>
-<div class="faq-answer">
-Las tarjetas de presentación digitales son más accesibles, ya que no se necesita una aplicación especial para leerlas, solo se requiere un smartphone con tecnología NFC. </div>
+Las tarjetas de presentación digitales son ecológicas y contribuyen a reducir la huella de carbono, ya que no se necesitan insumos de papel ni tinta para su producción.
+</div>
 
-<button class="faq-question" onclick="toggleFAQ(4)">4) Costo Efectiva
-<span class="dropdown-arrow">▼</span></button>
+<button class="faq-question" onclick="toggleFAQ(3)"><span class="tab-text">3) Efectiva y Completa</span><span class="dropdown-arrow">▼</span></button>
 <div class="faq-answer">
-Las tarjetas de presentación digitales pueden contener una mayor cantidad de información que las tarjetas de papel, como enlaces directos a páginas web, redes sociales, videos y más.  </div>
-<button class="faq-question" onclick="toggleFAQ(5)">5) Editable & Reprogramable<span class="dropdown-arrow">▼</span></button>
+Las tarjetas de presentación digitales son más accesibles, ya que no se necesita una aplicación especial para leerlas, solo se requiere un smartphone con tecnología NFC.
+</div>
+
+<button class="faq-question" onclick="toggleFAQ(4)"><span class="tab-text">4) Costo Efectiva</span><span class="dropdown-arrow">▼</span></button>
 <div class="faq-answer">
-Las tarjetas de presentación digitales pueden actualizarse con facilidad, lo que significa que si tu información cambia, puedes editarla y actualizarla sin tener que reimprimir un lote completo de tarjetas nuevas. </div>
-  <button class="faq-question" onclick="toggleFAQ(6)">6) Mayor Comodidad
-<span class="dropdown-arrow">▼</span></button>
+Las tarjetas de presentación digitales pueden contener una mayor cantidad de información que las tarjetas de papel, como enlaces directos a páginas web, redes sociales, videos y más.
+</div>
+
+<button class="faq-question" onclick="toggleFAQ(5)"><span class="tab-text">5) Editable y Reprogramable</span><span class="dropdown-arrow">▼</span></button>
 <div class="faq-answer">
-Las tarjetas de presentación digitales son más interactivas y creativas, permitiendo integrar innovadoras formas de presentar los datos de contacto, incluyendo la integración de imágenes y diseño personalizado.</div>
-  <button class="faq-question" onclick="toggleFAQ(7)">7) Mayor Impacto & Conexión<span class="dropdown-arrow">▼</span></button>
+Las tarjetas de presentación digitales pueden actualizarse con facilidad, lo que significa que si tu información cambia, puedes editarla y actualizarla sin tener que reimprimir un lote completo de tarjetas nuevas.
+</div>
+
+<button class="faq-question" onclick="toggleFAQ(6)"><span class="tab-text">6) Mayor Comodidad</span><span class="dropdown-arrow">▼</span></button>
 <div class="faq-answer">
-Las tarjetas de presentación digitales pueden ser transmitidas de forma inalámbrica y compartirse en tiempo real, le permiten interactuar con otras personas y compartir información de manera más dinámica. </div>
- 
-<!-- Repite el patrón para las otras preguntas -->
+Las tarjetas de presentación digitales son más interactivas y creativas, permitiendo integrar innovadoras formas de presentar los datos de contacto, incluyendo la integración de imágenes y diseño personalizado.
+</div>
+
+<button class="faq-question" onclick="toggleFAQ(7)"><span class="tab-text">7) Mayor Impacto y Conexión</span><span class="dropdown-arrow">▼</span></button>
+<div class="faq-answer">
+Las tarjetas de presentación digitales pueden ser transmitidas de forma inalámbrica y compartirse en tiempo real, le permiten interactuar con otras personas y compartir información de manera más dinámica.
+</div>
+
+<!-- Repeat the pattern for the other questions -->
 </div>
 
 <script>
 function toggleFAQ(index) {
-const answer = document.querySelectorAll('.faq-answer')[index - 1];
-answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+    const answer = document.querySelectorAll('.faq-answer')[index - 1];
+    const tab = document.querySelectorAll('.faq-question')[index - 1];
+    
+    if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        tab.classList.remove('open'); // Remove the "open" class to reset arrow direction
+    } else {
+        answer.style.display = 'block';
+        tab.classList.add('open'); // Add the "open" class to rotate arrow
+    }
 }
 </script>
 
