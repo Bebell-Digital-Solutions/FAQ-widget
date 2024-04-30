@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accordion Dropdown Widget Creator</title>
+<style>
+/* Your CSS styles here */
+  /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Form Styles */
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+select {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Preview Styles */
+#preview-area {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+/* Copy Code Button Styles */
+#copy-code-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#copy-code-btn:hover {
+  background-color: #45a049;
+}
+
+/* Accordion Styles */
+.faq-container {
+  width: 100%;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 15px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #eaeaea;
+}
+
+.tab-text {
+  flex: 1;
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+}
+</style>
+</head>
+<body>
+<!-- Number of Tabs Selection -->
+<label for="numTabs">Number of Tabs:</label>
+<select id="numTabs">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <!-- Add more options as needed -->
+</select>
+
+<!-- Customization Options for Tabs -->
+<div id="customization-options">
+  <!-- Dynamic input fields will be added here based on the selected number of tabs -->
+</div>
+
+<!-- Preview Area -->
+<h2>Preview:</h2>
+<div id="preview-area">
+  <!-- Preview of the customized accordion will be displayed here -->
+</div>
+
+<!-- Copy Code Button -->
+<div id="code-container">
+  <!-- Generated code will be displayed here -->
+</div>
+<button id="copy-code-btn" onclick="copyCode()">Copy Code</button>
+
+<!-- Your JavaScript code here -->
+<script>
+function copyCode() {
+  /* Get the generated code */
+  var codeContainer = document.getElementById("code-container");
+  var code = codeContainer.innerText;
+
+  /* Create a temporary textarea element */
+  var tempTextArea = document.createElement("textarea");
+  tempTextArea.value = code;
+  document.body.appendChild(tempTextArea);
+
+  /* Select and copy the code */
+  tempTextArea.select();
+  document.execCommand("copy");
+
+  /* Remove the temporary textarea */
+  document.body.removeChild(tempTextArea);
+
+  /* Provide visual feedback */
+  alert("Code copied to clipboard!");
+}
+
+document.getElementById('numTabs').addEventListener('change', function() {
+  var numTabs = parseInt(this.value);
+  var customizationOptions = document.getElementById('customization-options');
+
+  // Clear previous customization options
+  customizationOptions.innerHTML = '';
+
+  // Generate input fields for each tab
+  for (var i = 1; i <= numTabs; i++) {
+    customizationOptions.innerHTML += `
+      <div>
+        <label for="tab-title-${i}">Title for Tab ${i}:</label>
+        <input type="text" id="tab-title-${i}" name="tab-title-${i}">
+      </div>
+      <div>
+        <label for="tab-text-${i}">Text for Tab ${i}:</label>
+        <textarea id="tab-text-${i}" name="tab-text-${i}"></textarea>
+      </div>
+      <!-- Add more customization options here -->
+    `;
+  }
+});
+
+// Function to update the preview area based on user customization
+function updatePreview() {
+  var numTabs = parseInt(document.getElementById('numTabs').value);
+  var previewArea = document.getElementById('preview-area');
+  var codeContainer = document.getElementById('code-container');
+
+  // Clear previous preview and generated code
+  previewArea.innerHTML = '';
+  codeContainer.innerHTML = '';
+
+  // Generate HTML for the preview and code
+  var htmlCode = '<div class="faq-container">';
+  for (var i = 1; i <= numTabs; i++) {
+    var title = document.getElementById('tab-title-' + i).value;
+    var text = document.getElementById('tab-text-' + i).value;
+    htmlCode += `
+      <button class="faq-question" onclick="toggleFAQ(${i})">
+        <span class="tab-text">${i}) ${title}</span><span class="dropdown-arrow">▼</span>
+      </button>
+      <div class="faq-answer">${text}</div>
+    `;
+  }
+  htmlCode += '</div>';
+
+  // Update preview area and generated code
+  previewArea.innerHTML = htmlCode;
+  codeContainer.innerText = htmlCode;
+}
+
+// Event listeners for input fields to update preview
+var inputs = document.querySelectorAll('input, textarea');
+inputs.forEach(function(input) {
+  input.addEventListener('input', updatePreview);
+});
+
+// Toggle FAQ function
+function toggleFAQ(index) {
+  const answer = document.querySelectorAll('.faq-answer')[index - 1];
+  const tab = document.querySelectorAll('.faq-question')[index - 1];
+  
+  if (answer.style.display === 'block') {
+    answer.style.display = 'none';
+    tab.classList.remove('open'); // Remove the "open" class to reset arrow direction
+  } else {
+    answer.style.display = 'block';
+    tab.classList.add('open'); // Add the "open" class to rotate arrow
+  }
+}
+</script>
+</body>
+</html>
