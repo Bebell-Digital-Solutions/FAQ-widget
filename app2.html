@@ -35,7 +35,7 @@ form {
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
   color: #333;
 }
 
@@ -58,6 +58,7 @@ select {
 /* Preview Styles */
 #preview-area {
   border: 1px solid #ccc;
+  width: 100%;
   border-radius: 5px;
   padding: 20px;
   background-color: #f9f9f9;
@@ -153,28 +154,31 @@ select {
     <!-- Dynamic input fields will be added here based on the selected number of tabs -->
   </div>
   
-<!-- Generate Button -->
-  <button id="generate-btn">Generate</button>
   
   <!-- Preview Area -->
-  <h2>Preview:</h2>
+ <h2>Preview:</h2>
   <div id="preview-area" class="faq-container">
     <!-- Preview of the customized accordion will be displayed here -->
   </div>
   
+<!-- Generate Button -->
+  <div><p></p></p>
+  <button id="generate-btn">Generate</button></div>
+
   
   <!-- Copy Code Button -->
   <div id="code-container">
     <!-- Generated code will be displayed here -->
+  
   </div>
-  <button id="copy-code-btn" onclick="copyCode()">Copy Code</button>
+  <button id="copy-code-btn">Copy Code</button>
 </div>
 
 <script>
 // JavaScript code goes here
 
 // Function to copy generated code to clipboard
-function copyCode() {
+document.getElementById("copy-code-btn").addEventListener("click", function() {
   var codeContainer = document.getElementById("code-container");
   var code = codeContainer.innerText;
 
@@ -188,7 +192,48 @@ function copyCode() {
   document.body.removeChild(tempTextArea);
 
   alert("Code copied to clipboard!");
-}
+});
+
+  // Function to update customization options based on number of tabs selected
+document.getElementById('numTabs').addEventListener('change', function() {
+  var numTabs = parseInt(this.value);
+  var customizationOptions = document.getElementById('customization-options');
+
+  customizationOptions.innerHTML = '';
+
+  for (var i = 1; i <= numTabs; i++) {
+    customizationOptions.innerHTML += `
+      <div>
+        <label for="tab-title-${i}">Title for Tab ${i}:</label>
+        <input type="text" id="tab-title-${i}" name="tab-title-${i}">
+      </div>
+      <div>
+        <label for="tab-text-${i}">Text for Tab ${i}:</label>
+        <textarea id="tab-text-${i}" name="tab-text-${i}"></textarea>
+      </div>
+      <!-- Add more customization options here if needed -->
+    `;
+  }
+});
+
+  // Function to generate and preview the accordion widget
+document.getElementById('generate-btn').addEventListener('click', function() {
+  var numTabs = parseInt(document.getElementById('numTabs').value);
+  var previewArea = document.getElementById('preview-area');
+  var codeContainer = document.getElementById('code-container');
+
+  previewArea.innerHTML = '';
+  codeContainer.innerHTML = '';
+
+  var htmlCode = '<div class="faq-container">';
+  for (var i = 1; i <= numTabs; i++) {
+    var title = document.getElementById('tab-title-' + i).value;
+    var text = document.getElementById('tab-text-' + i).value;
+
+
+
+
+    
 
 // Event listener to update preview when input fields change
 document.getElementById('numTabs').addEventListener('change', function() {
@@ -260,45 +305,23 @@ document.getElementById('numTabs').addEventListener('change', function() {
   }
 });
 
-// Function to update preview area
-function updatePreview() {
-  var numTabs = parseInt(document.getElementById('numTabs').value);
-  var previewArea = document.getElementById('preview-area');
-  var codeContainer = document.getElementById('code-container');
-
-  previewArea.innerHTML = '';
-  codeContainer.innerHTML = '';
-
-  var htmlCode = '<div class="faq-container" style="background-color: ' + document.getElementById('container-bg-color').value + '; width: ' + document.getElementById('container-width').value + 'px;">';
-  for (var i = 1; i <= numTabs; i++) {
-    var title = document.getElementById('tab-title-' + i).value;
-    var text = document.getElementById('tab-text-' + i).value;
-    var borderColor = document.getElementById('tab-border-color-' + i).value;
-    var borderWidth = document.getElementById('tab-border-width-' + i).value + 'px';
-    var titleFont = document.getElementById('tab-title-font-' + i).value;
-    var titleColor = document.getElementById('tab-title-color-' + i).value;
-    var titleSize = document.getElementById('tab-title-size-' + i).value + 'px';
-    var textFont = document.getElementById('tab-text-font-' + i).value;
-    var textColor = document.getElementById('tab-text-color-' + i).value;
-    var textSize = document.getElementById('tab-text-size-' + i).value + 'px';
-var arrowColor = document.getElementById('tab-arrow-color-' + i).value;
-var arrowSize = document.getElementById('tab-arrow-size-' + i).value + 'px';
 
 
 // Build HTML for each tab
-htmlCode += `
-  <div class="faq">
-    <div class="faq-question" style="border: ${borderWidth} solid ${borderColor};">
-      <h3 style="font-family: ${titleFont}; color: ${titleColor}; font-size: ${titleSize};">${title}</h3>
-      <span class="arrow" style="border-color: transparent transparent ${arrowColor}; border-width: 0 ${arrowSize} ${arrowSize};"></span>
-    </div>
-    <div class="faq-answer" style="font-family: ${textFont}; color: ${textColor}; font-size: ${textSize};">
-      ${text}
-    </div>
-  </div>
-`;
-}
-htmlCode += '</div>';
+    htmlCode += `
+      <div class="faq">
+        <div class="faq-question">
+          <h3>${title}</h3>
+          <span class="arrow"></span>
+        </div>
+        <div class="faq-answer">
+          ${text}
+        </div>
+      </div>
+    `;
+  }
+  htmlCode += '</div>';
+
 
 // Display preview
 previewArea.innerHTML = htmlCode;
