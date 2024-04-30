@@ -309,3 +309,5 @@ document.getElementById('customization-options').addEventListener('input', updat
 // Initial update of preview
 updatePreview();
 </script>
+</body>
+</html>
