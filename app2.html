@@ -216,7 +216,7 @@ document.getElementById('numTabs').addEventListener('change', function() {
   }
 });
 
-  // Function to generate and preview the accordion widget
+// Function to generate and preview the accordion widget
 document.getElementById('generate-btn').addEventListener('click', function() {
   var numTabs = parseInt(document.getElementById('numTabs').value);
   var previewArea = document.getElementById('preview-area');
@@ -230,84 +230,7 @@ document.getElementById('generate-btn').addEventListener('click', function() {
     var title = document.getElementById('tab-title-' + i).value;
     var text = document.getElementById('tab-text-' + i).value;
 
-
-
-
-    
-
-// Event listener to update preview when input fields change
-document.getElementById('numTabs').addEventListener('change', function() {
-  var numTabs = parseInt(this.value);
-  var customizationOptions = document.getElementById('customization-options');
-
-  customizationOptions.innerHTML = '';
-
-  for (var i = 1; i <= numTabs; i++) {
-    customizationOptions.innerHTML += `
-      <div>
-        <label for="tab-title-${i}">Title for Tab ${i}:</label>
-        <input type="text" id="tab-title-${i}" name="tab-title-${i}">
-      </div>
-      <div>
-        <label for="tab-text-${i}">Text for Tab ${i}:</label>
-        <textarea id="tab-text-${i}" name="tab-text-${i}"></textarea>
-      </div>
-      <div>
-        <label for="tab-border-color-${i}">Border Color for Tab ${i}:</label>
-        <input type="color" id="tab-border-color-${i}" name="tab-border-color-${i}" value="#ccc">
-      </div>
-      <div>
-        <label for="tab-border-width-${i}">Border Width for Tab ${i}:</label>
-        <input type="number" id="tab-border-width-${i}" name="tab-border-width-${i}" min="1" value="1">
-      </div>
-      <div>
-        <label for="tab-title-font-${i}">Font for Title ${i}:</label>
-        <select id="tab-title-font-${i}" name="tab-title-font-${i}">
-          <option value="Arial">Arial</option>
-          <option value="Helvetica">Helvetica</option>
-          <!-- Add more font options as needed -->
-        </select>
-      </div>
-      <div>
-        <label for="tab-title-color-${i}">Color for Title ${i}:</label>
-        <input type="color" id="tab-title-color-${i}" name="tab-title-color-${i}" value="#333">
-      </div>
-      <div>
-        <label for="tab-title-size-${i}">Size for Title ${i}:</label>
-        <input type="number" id="tab-title-size-${i}" name="tab-title-size-${i}" min="10" value="14">
-      </div>
-      <div>
-        <label for="tab-text-font-${i}">Font for Text ${i}:</label>
-        <select id="tab-text-font-${i}" name="tab-text-font-${i}">
-          <option value="Arial">Arial</option>
-          <option value="Helvetica">Helvetica</option>
-          <!-- Add more font options as needed -->
-        </select>
-      </div>
-      <div>
-        <label for="tab-text-color-${i}">Color for Text ${i}:</label>
-        <input type="color" id="tab-text-color-${i}" name="tab-text-color-${i}" value="#333">
-      </div>
-      <div>
-        <label for="tab-text-size-${i}">Size for Text ${i}:</label>
-        <input type="number" id="tab-text-size-${i}" name="tab-text-size-${i}" min="10" value="14">
-      </div>
-      <div>
-        <label for="tab-arrow-color-${i}">Color for Arrow ${i}:</label>
-        <input type="color" id="tab-arrow-color-${i}" name="tab-arrow-color-${i}" value="#333">
-      </div>
-      <div>
-        <label for="tab-arrow-size-${i}">Size for Arrow ${i}:</label>
-        <input type="number" id="tab-arrow-size-${i}" name="tab-arrow-size-${i}" min="10" value="14">
-      </div>
-      <!-- Add more customization options here -->
-    `;
-  }
-});
-
-
-
-// Build HTML for each tab
+    // Build HTML for each tab
     htmlCode += `
       <div class="faq">
         <div class="faq-question">
@@ -322,22 +245,15 @@ document.getElementById('numTabs').addEventListener('change', function() {
   }
   htmlCode += '</div>';
 
+  // Display preview
+  previewArea.innerHTML = htmlCode;
 
-// Display preview
-previewArea.innerHTML = htmlCode;
+  // Display generated code
+  codeContainer.innerText = htmlCode;
+});
 
-// Display generated code
-codeContainer.innerText = htmlCode;
-}
-
-// Event listener to update preview when input fields change
-document.getElementById('customization-options').addEventListener('input', updatePreview);
-
-// Event listener for the Generate button
-document.getElementById('generate-btn').addEventListener('click', updatePreview);
-
-// Initial update of preview
-updatePreview();
 </script>
+
 </body>
 </html>
+  
