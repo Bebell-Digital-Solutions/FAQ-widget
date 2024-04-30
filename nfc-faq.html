@@ -114,7 +114,10 @@ Las tarjetas de presentación digitales pueden ser transmitidas de forma inalám
 </div>
 
 <script>
-function toggleFAQ(answer, tab) {
+function toggleFAQ(index) {
+    const answer = document.querySelectorAll('.faq-answer')[index - 1];
+    const tab = document.querySelectorAll('.faq-question')[index - 1];
+    
     if (answer.style.display === 'block') {
         answer.style.display = 'none';
         tab.classList.remove('open'); // Remove the "open" class to reset arrow direction
