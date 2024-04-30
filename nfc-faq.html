@@ -30,7 +30,7 @@ font-family: Montserrat, sans-serif;
         border: 1px solid #D1D1D1;
         border-radius: 0px;
         margin: 5px 0;
-        text-align: center;
+        text-align: left;
         width: 100%;
         background-color: #FAFAFA;
         outline: none;
@@ -39,18 +39,19 @@ font-family: Montserrat, sans-serif;
     }
 
     .faq-answer {
-        display: none;
-        justify-content: space-between;
-        align-items: left;
-        font-family: Montserrat, sans-serif;
-        outline: none;
-        font-size: 18px;
-        text-align: left;
-        text-color: #000;
-        width: 100%;
-        margin: 5px 0;
-       }
+    display: none;
+    justify-content: space-between;
+    align-items: left;
+    font-family: Montserrat, sans-serif;
+    outline: none;
+    font-size: 18px;
+    text-align: left;
+    color: #000; /* Corrected property */
+    width: 100%;
+    margin: 5px 0;
+}
 
+    
     .faq-container .dropdown-arrow {
         color: #967E2D;
         float: right;
@@ -113,10 +114,7 @@ Las tarjetas de presentación digitales pueden ser transmitidas de forma inalám
 </div>
 
 <script>
-function toggleFAQ(index) {
-    const answer = document.querySelectorAll('.faq-answer')[index - 1];
-    const tab = document.querySelectorAll('.faq-question')[index - 1];
-    
+function toggleFAQ(answer, tab) {
     if (answer.style.display === 'block') {
         answer.style.display = 'none';
         tab.classList.remove('open'); // Remove the "open" class to reset arrow direction
