@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+font-family: Montserrat, sans-serif;
+}
+
+    .faq-container {
+        width: 80%;
+        margin: 30px auto;
+        background-color: #182569;
+        padding: 35px;
+        border-radius: 20px;
+    }
+
+    .faq-question {
+  display: flex;
+        justify-content: space-between;
+  		align-items: left;
+  		font-family: Montserrat, sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 15px;
+  		color: #000;
+        cursor: pointer;
+        padding: 15px;
+        border: 1px solid #D1D1D1;
+        border-radius: 15px;
+        margin: 5px 0;
+        text-align: center;
+        width: 100%;
+        background-color: white;
+       	outline: none;
+		font-size: 14px;
+      	margin-bottom: 2px; /* Añadido espacio entre cada pestaña */
+    }
+
+    .faq-answer {
+        display: none;
+        padding: 10px;
+        color: #FFFFFF;
+    }
+
+    .faq-container .dropdown-arrow {
+        color: #182569;
+        float: right;
+        margin-top: 2px;
+        margin-right: 5px;
+    }
+
+    @media (max-width: 768px) {
+        .faq-container {
+            width: 100%;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="faq-container">
+<button class="faq-question" onclick="toggleFAQ(1)">¿Cuáles son las actividades acuáticas que ofrecen?<span class="dropdown-arrow">▼</span></button>
+<div class="faq-answer">
+En Blue Marine Punta Cana ofrecemos una amplia gama de actividades, incluyendo snorkel, paseos en catamarán, parasailing, y mucho más.</div>
+  
+
+   <button class="faq-question" onclick="toggleFAQ(2)">¿Cuál es la edad mínima para participar en las actividades?<span class="dropdown-arrow">▼</span></button>
+  <div class="faq-answer">
+    <p>
+La edad mínima varía según la actividad. Por lo general, requerimos que los participantes tengan al menos 8 años, pero esto puede variar.    <p>
+  </div>
+  
+  
+<button class="faq-question" onclick="toggleFAQ(3)">¿Es necesario tener experiencia previa para participar?<span class="dropdown-arrow">▼</span></button>
+<div class="faq-answer">
+No, la mayoría de nuestras actividades están diseñadas para todos los niveles de experiencia, desde principiantes hasta expertos.
+</div>
+
+<button class="faq-question" onclick="toggleFAQ(4)">¿Qué debo llevar conmigo para la actividad?	
+<span class="dropdown-arrow">▼</span></button>
+<div class="faq-answer">
+Se recomienda traer protector solar, toalla, ropa cómoda y traje de baño. Además, es importante llevar agua para mantenerse hidratado.
+  </div>
+<button class="faq-question" onclick="toggleFAQ(5)">¿Qué sucede si el clima es malo el día de la reserva?<span class="dropdown-arrow">▼</span></button>
+<div class="faq-answer">
+En caso de mal tiempo, nos comunicaremos contigo para reprogramar la actividad o proporcionarte un reembolso completo, según tu preferencia.
+</div>
+  <button class="faq-question" onclick="toggleFAQ(6)">¿Ofrecen transporte desde mi hotel?<span class="dropdown-arrow">▼</span></button>
+<div class="faq-answer">
+Sí, ofrecemos servicio de transporte desde la mayoría de los hoteles en la zona de Punta Cana. Por favor, contáctanos para más información.
+</div>
+  <button class="faq-question" onclick="toggleFAQ(7)">¿Cuál es la política de cancelación y reembolso?<span class="dropdown-arrow">▼</span></button>
+<div class="faq-answer">
+Consulta nuestra política de cancelación y reembolso en nuestra página web para obtener información detallada sobre este tema.
+ </div>
+  <button class="faq-question" onclick="toggleFAQ(8)">¿Cuáles formas de pago aceptamos?<span class="dropdown-arrow">▼</span></button>
+<div class="faq-answer">
+Los precios son en dólares americanos. Se puede reservar a través de nuestra página y completar su pago con una tarjeta de crédito y/o de débito por la plataforma PayPal. Se puede pagar en efectivo o por transferencia bancaria, pero debes comunicarte con uno de nuestros operadores.
+</div>
+
+
+<!-- Repite el patrón para las otras preguntas -->
+</div>
+
+<script>
+function toggleFAQ(index) {
+const answer = document.querySelectorAll('.faq-answer')[index - 1];
+answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>
