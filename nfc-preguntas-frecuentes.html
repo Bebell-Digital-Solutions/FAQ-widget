@@ -8,39 +8,38 @@ body {
 font-family: Montserrat, sans-serif;
 }
 
-    .faq-container {
-        width: 100%;
-        margin: 0 auto;
-        background-color: white;
-        padding: 5px;
-        border-radius: 0px;
-    }
+.faq-container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 5px;
+    border-radius: 0px;
+}
 
-    .faq-question {
-  display: flex;
-        justify-content: space-between;
-        align-items: left;
-        font-family: Montserrat, sans-serif;
-        font-weight: bold;
-        cursor: pointer;
-        padding: 25px;
-        color: #000;
-        cursor: pointer;
-        padding: 25px;
-        border: 1px solid #D1D1D1;
-        border-radius: 0px;
-        text-align: left;
-        width: 100%;
-        background-color: #FAFAFA;
-        outline: none;
-        font-size: 14px;
-        margin-bottom: 2px; /* Added space between each tab */
-        box-sizing: border-box; /* Ensure padding is included in width */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 25px;
+    color: #000;
+    cursor: pointer;
+    padding: 25px;
+    border: 1px solid #D1D1D1;
+    border-radius: 0px;
+    text-align: left;
+    width: 100%;
+    background-color: #FAFAFA;
+    outline: none;
+    font-size: 14px;
+    margin-bottom: 2px; /* Added space between each tab */
+    box-sizing: border-box; /* Ensure padding is included in width */
 
-    }
+}
 
-    
-    .faq-answer {
+.faq-answer {
     display: none;
     justify-content: space-between;
     align-items: left;
@@ -54,24 +53,24 @@ font-family: Montserrat, sans-serif;
     padding: 25px; /* Added padding */
 }
 
-    
-    .faq-container .dropdown-arrow {
-        color: #967E2D;
-        float: right;
-        margin-top: 2px;
-        margin-right: 5px;
-        transition: transform 0.3s; /* Smooth transition for rotation */
-    }
 
-    .faq-container .open .dropdown-arrow {
-        transform: rotate(180deg); /* Rotate the arrow icon when tab is open */
-    }
+.faq-container .dropdown-arrow {
+    color: #967E2D;
+    float: right;
+    margin-top: 2px;
+    margin-right: 5px;
+    transition: transform 0.3s; /* Smooth transition for rotation */
+}
 
-    @media (max-width: 768px) {
-        .faq-container {
-            width: 100%;
-        }
+.faq-container .open .dropdown-arrow {
+    transform: rotate(180deg); /* Rotate the arrow icon when tab is open */
+}
+
+@media (max-width: 768px) {
+    .faq-container {
+        width: 100%;
     }
+}
 </style>
 
 </head>
@@ -85,70 +84,136 @@ Nuestras tarjetas de presentación digitales vienen con tecnología NFC integrad
 
 <button class="faq-question" onclick="toggleFAQ(2)"><span class="tab-text">¿Cómo funcionan las tarjetas digitales NFC?</span><span class="dropdown-arrow">▼</span></button>
 <div class="faq-answer">
-<strong>Transmisión de información vía NFC:</strong></div><div>Nuestras tarjetas digitales vienen equipadas con un chip NFC que permite la transmisión de información de contacto con solo tocar la tarjeta con un dispositivo móvil compatible con esta tecnología. Al tocar la tarjeta, se abre automáticamente una ventana emergente en el dispositivo móvil del usuario que contiene toda la información de contacto programada en la tarjeta, como nombre, número de teléfono, correo electrónico, sitio web, redes sociales, entre otros. Este proceso es rápido y fácil de usar, permitiendo que los usuarios accedan a la información de contacto de forma inmediata sin la necesidad de escribirla manualmente.</div><br><div>https://i.ibb.co/m6dYDJT/TARJETAS-DIGITALES-NFC-INSTAGRAM-POSTS-7.gif</div><br><br><div><strong>Escaneo de código QR: </strong></div><div>Además de la transmisión vía NFC, nuestras tarjetas digitales también incluyen un código QR impreso en la superficie de la tarjeta. Al escanear el código QR con la cámara de un dispositivo móvil, se abre automáticamente una página web con toda la información de contacto programada en la tarjeta, lo que permite una experiencia interactiva y rápida para el usuario. Este método es ideal para aquellos usuarios que no disponen de dispositivos móviles compatibles con NFC, pero que aún así quieren tener acceso a la información de contacto de manera rápida y sencilla.</div><br><div><img src="https://i.ibb.co/fnbvHT6/TARJETAS-DIGITALES-NFC-INSTAGRAM-POSTS-4.gif"></div><br><br>
+<strong>Transmisión de información vía NFC:</strong></div><div>Nuestras tarjetas digitales vienen equipadas con un chip NFC que permite la transmisión de información de contacto con solo tocar la tarjeta con un dispositivo móvil compatible con esta tecnología. Al tocar la tarjeta, se abre automáticamente una ventana emergente en el dispositivo móvil del usuario que contiene toda la información de contacto programada en la tarjeta, como nombre, número de teléfono, correo electrónico, sitio web, redes sociales, entre otros. Este proceso es rápido y fácil de usar, permitiendo que los usuarios accedan a la información de contacto de forma inmediata sin la necesidad de escribirla manualmente.</div><br><div>https://i.ibb.co/m6dYDJT/TARJETAS-DIGITALES-NFC-INSTAGRAM-POSTS-7.gif</div><br><br><div><strong>Escaneo de código QR: </strong></div><div>Además de la transmisión vía NFC, nuestras tarjetas digitales también incluyen un código QR impreso en la superficie de la tarjeta. Al escanear el código QR con la cámara de un dispositivo móvil, se abre automáticamente una página web con toda la información de contacto programada en la tarjeta, lo que permite una experiencia interactiva y rápida para el usuario. Este método es ideal para aquellos usuarios que no tienen un dispositivo móvil compatible con la tecnología NFC o que prefieren escanear un código QR en lugar de tocar una tarjeta.</div><br><div>https://i.ibb.co/jGTWYzZ/Artboard-5.jpg</div>
+
+<button class="faq-question" onclick="toggleFAQ(3)"><span class="tab-text">¿Qué ventajas ofrecen las tarjetas digitales NFC?</span><span class="dropdown-arrow">▼</span></button>
+<div class="faq-answer">
+<strong>Las tarjetas digitales NFC ofrecen una serie de ventajas sobre las tarjetas de presentación tradicionales:</strong></div><div><br></div><div><strong>1) Conveniencia:</strong> Se pueden compartir fácilmente con solo tocar un dispositivo compatible.&nbsp;</div><div><strong>2) Ecología:</strong> Reducen el consumo de papel y contribuyen a la conservación del medio ambiente.&nbsp;</div><div><strong>3) Profesionalismo:</strong> Transmiten una imagen moderna y tecnológica de tu negocio o marca personal.&nbsp;</div><div><strong>4) Personalización:</strong> Pueden incluir información multimedia, como enlaces a sitios web, videos o redes sociales.&nbsp;</div><div><strong>5) Durabilidad:</strong> Los materiales de alta calidad garantizan que las tarjetas sean duraderas y resistentes al desgaste.&nbsp;</div><br><div>En resumen, las tarjetas digitales NFC son una herramienta poderosa para destacar y hacer crecer tu red de contactos de manera efectiva y moderna.</div>
+
+<button class="faq-question" onclick="toggleFAQ(4)"><span class="tab-text">¿Qué tipo de información puedo incluir en una tarjeta digital NFC?</span><span class="dropdown-arrow">▼</span></button>
+<div class="faq-answer">
+Las tarjetas digitales NFC ofrecen una amplia gama de posibilidades para incluir información relevante y atractiva:</div><br><div>1) <strong>Información de contacto:</strong> Nombre, empresa, cargo, dirección de correo electrónico, número de teléfono, dirección postal, etc.</div><div>2) <strong>Enlaces a redes sociales:</strong> Perfiles de LinkedIn, Facebook, Instagram, Twitter, etc.</div><div>3) <strong>Enlaces a sitios web:</strong> Página web personal, página de empresa, portafolio en línea, etc.</div><div>4) <strong>Información multimedia:</strong> Videos promocionales, presentaciones de diapositivas, galerías de imágenes, etc.</div><div>5) <strong>Información adicional:</strong> Biografía, logotipo de la empresa, eslogan, información de productos/servicios, etc.</div><br><div>La versatilidad de las tarjetas digitales NFC te permite adaptar la información según tus necesidades y preferencias, creando una experiencia única para quienes las reciben.</div>
 </div>
 
-<button class="faq-question" onclick="toggleFAQ(3)"><span class="tab-text">¿Cómo utilizar las tarjetas de presentación digitales?</span><span class="dropdown-arrow">▼</span></button>
+<button class="faq-question" onclick="toggleFAQ(5)"><span class="tab-text">¿Cuál es el costo de una Tarjeta Digital NFC?</span><span class="dropdown-arrow">▼</span></button>
 <div class="faq-answer">
-Aquí te presento 5 formas en las que se pueden utilizar nuestras tarjetas de presentación digitales:</div><br><div><strong>1) Intercambio de contactos: </strong></div><div>Las tarjetas de presentación digitales son ideales para intercambiar información de contacto de forma rápida y sencilla. Gracias a la tecnología NFC y el código QR, se puede compartir toda la información de contacto con solo tocar la tarjeta o escanear el código, lo que elimina la necesidad de escribir manualmente la información de contacto.</div><br><div><strong>2) Publicidad de la marca: </strong></div><div>Nuestras tarjetas de presentación digitales pueden ser personalizadas con la imagen de marca y la información de contacto de la empresa o persona. Esto permite una mayor visibilidad de la marca y hace que sea más fácil para los clientes potenciales contactar a la empresa o persona.</div><br><div><strong>3) Acceso a información adicional: </strong></div><div>Las tarjetas de presentación digitales pueden ser programadas para incluir enlaces a sitios web, perfiles de redes sociales, catálogos de productos, entre otros. Esto permite a los usuarios acceder a información adicional de forma rápida y sencilla.</div><br><div><strong>4) Presentaciones de productos: </strong></div><div>Las tarjetas de presentación digitales pueden ser programadas para incluir presentaciones de productos o servicios. Esto permite a los usuarios ver información detallada sobre los productos o servicios ofrecidos por la empresa o persona.</div><br><div><strong>5) Sustitución de tarjetas de papel: </strong></div><div>Las tarjetas de presentación digitales pueden ser una alternativa más sostenible a las tarjetas de papel. Al utilizar tarjetas de presentación digitales, se reduce la cantidad de papel utilizado en la impresión de tarjetas de papel y se reduce la huella de carbono asociada con la producción de papel. Espero que estas diferentes formas de uso te hayan sido útiles y te hayan dado una idea de cómo puedes utilizar nuestras tarjetas de presentación digitales.
-</div>
-
-<button class="faq-question" onclick="toggleFAQ(4)"><span class="tab-text">¿Qué beneficios me ofrece la Tarjeta Digital?</span><span class="dropdown-arrow">▼</span></button>
-<div class="faq-answer">
-class="ql-align-center"><strong>Las Tarjetas Digitales NFC</strong></div><div class="ql-align-center"><br></div><div class="ql-align-center">Las tarjetas digitales NFC (comunicación de campo cercano) son la innovación de las tarjetas de presentación&nbsp;tradicionales.</div><div class="ql-align-center"><br></div><div class="ql-align-center">Nuestras tarjetas digitales son meticulosamente fabricadas con materiales de alta calidad y la mejor terminación. Son 100% personalizadas y adaptadas a tu marca o negocio.</div><div class="ql-align-center"><br></div><div class="ql-align-center"><strong>Otros Beneficios:</strong></div><div class="ql-align-center"><br></div><div class="ql-align-center">√ Tener a mano toda la información que necesites (catálogos de servicios o productos, galerías de fotos, portafolio, currículo, redes sociales, páginas web, archivos descargables, etc. )</div><div class="ql-align-center"><br></div><div class="ql-align-center">√ Poder cambiar y actualizar la información de la tarjeta.</div><div class="ql-align-center"><br></div><div class="ql-align-center">√ Uso ilimitado.</div><div class="ql-align-center"><br></div><div class="ql-align-center">√ Un pago único.</div><div class="ql-align-center"><br></div><div class="ql-align-center">√ Un ahorro a largo plazo.</div><div class="ql-align-center"><br></div><div class="ql-align-center">√ Ayuda a la preservación del Medio Ambiente.</div><div class="ql-align-center"><br></div><div class="ql-align-center">√ Impactar e impresionar a todo el mundo.</div><div class="ql-align-center"><br></div><div class="ql-align-center">√ Resistente y Durable.</div><div class="ql-align-center"><br></div><div class="ql-align-center">√ Muy Ligero.</div><div class="ql-align-center"><br></div><div class="ql-align-center">√ Impermeable.</div><div class="ql-align-center"><br></div><div class="ql-align-center">√ No hay que andar con un paquete de tarjetas.</div><div class="ql-align-center"><br></div><div class="ql-align-center">https://i.ibb.co/YNdvWmJ/18.png https://i.ibb.co/QvmXxS8/19.png
-</div>
-
-<button class="faq-question" onclick="toggleFAQ(5)"><span class="tab-text">¿Qué costo tiene una Tarjeta Digital NFC?</span><span class="dropdown-arrow">▼</span></button>
-<div class="faq-answer">
-Los precios de las tarjetas varían según el material y/o modelo que le interese.&nbsp;</div><div>-&nbsp;</div><div>Puede visitar nuestra tienda en línea para ver los diferentes modelos y sus respectivos precios aquí: 👇&nbsp;</div><br><div><a href="Https://shop.tarjeta-digital.site/catalogo" rel="noopener noreferrer" target="_blank">Https://shop.tarjeta-digital.site/catalogo</a></div><div>-&nbsp;</div><div>Los pagos se pueden efectuar vía PayPal, transferencia o depósito bancario y por Link de Pago 💳.&nbsp;</div><div>-</div><div>¿Tienes más preguntas?</div><div>Escríbenos&nbsp;por <a href="https://wa.me/18493523970" rel="noopener noreferrer" target="_blank">WhatsApp</a>&nbsp;
+Los precios de las tarjetas varían dependiendo del material y/o modelo que te interese.<br><br>
+Puedes visitar nuestra tienda en línea para ver los diferentes modelos y sus respectivos precios aquí: 👇<br>
+<a href="Https://shop.tarjeta-digital.site/catalogo" rel="noopener noreferrer" target="_blank">Https://shop.tarjeta-digital.site/catalogo</a><br><br>
+Los pagos pueden hacerse a través de PayPal, transferencia bancaria o depósito, y mediante enlace de pago 💳.<br><br>
+<a href="https://wa.me/18493523970" rel="noopener noreferrer" target="_blank">WhatsApp</a>
 </div>
 
 <button class="faq-question" onclick="toggleFAQ(6)"><span class="tab-text">¿Cuál es el Proceso de Producción?</span><span class="dropdown-arrow">▼</span></button>
 <div class="faq-answer">
-<strong>El proceso de producción tiene varios pasos:</strong></div><br><div>1) Completar el pedido y definir el diseño de la(s) tarjeta(s).</div><br><div>2) Nuestro departamento técnico le estará enviando un boceto o una propuesta de diseño para su revisión y aprobación. Podrá realizar todos los cambios que necesite.</div><br><div>3) Una vez aprobada la orden se mandará al departamento de producción</div><br><div>4) El departamento técnico trabajará en el diseño de la plantilla para la programación de las tarjetas.</div><br><div>5) Programación de las tarjetas: cada usuario/titular debe llenar individualmente el formulario para programación con sus datos personales.</div><br><div>6) Cada usuario/titular recibirá por correo instrucciones de uso para sus nuevas tarjetas de presentación digitales.</div><br><div>https://youtu.be/gbi7rp1SLXg</div><br>
+<strong>El proceso de producción implica varios pasos:</strong><br><br>
+1) Realizar el pedido y definir el diseño de la(s) tarjeta(s).<br>
+2) Nuestro departamento técnico te enviará un borrador o propuesta de diseño para tu revisión y aprobación. Puedes hacer todos los cambios que necesites.<br>
+3) Una vez aprobado el pedido, se enviará al departamento de producción.<br>
+4) El departamento técnico trabajará en el diseño de la plantilla para la programación de las tarjetas.<br>
+5) Programación de tarjetas: cada usuario/titular debe rellenar individualmente el formulario de programación con sus datos personales.<br>
+6) Cada usuario/titular recibirá por correo electrónico las instrucciones de uso de sus nuevas tarjetas de visita digitales.<br><br>
+<a href="https://youtu.be/gbi7rp1SLXg" rel="noopener noreferrer" target="_blank">https://youtu.be/gbi7rp1SLXg</a>
+</div>
 
 <button class="faq-question" onclick="toggleFAQ(7)"><span class="tab-text">¿Ofrecen envío internacional?</span><span class="dropdown-arrow">▼</span></button>
 <div class="faq-answer">
-Por supuesto que sí!&nbsp;</div>
-<div>Hacemos envíos en toda parte del mundo.</div>
-<div>-</div>
-<div>En la mayoría de los casos, el envío a domicilio en RD no tiene costo adicional (el envío es <strong>gratuito</strong>).&nbsp;</div>
-<div>-</div>
-<div>Para envíos internacionales puede comunicarse con nuestro equipo de soporte para conseguirle la mejor tarifa para su dirección de entrega.👇&nbsp;</div>
-<div>-</div>
-<div>WhatsApp: <a href="https://wa.me/18493523970" rel="noopener noreferrer" target="_blank">https://wa.me/18493523970</a>&nbsp;</div>
-<div>Email: <a href="mailto:Soporte@tarjeta-digital.site" rel="noopener noreferrer" target="_blank">Soporte@tarjeta-digital.site</a>&nbsp;</div>
-<div>-</div>
-<div>**ciertas restricciones aplican.</div>
-<div>Puede consultar las tarifas de envío internacional <a href="https://shop.tarjeta-digital.site/envio" rel="noopener noreferrer" target="_blank">aquí</a>.</div>
-<div>-</div>
-<div>¿Tienes más preguntas?</div>
-<div>Escríbenos&nbsp;por&nbsp;<a href="https://wa.me/18493523970" rel="noopener noreferrer" target="_blank">WhatsApp</a>
-</div>
-<br>
-<br>
-<div class="ql-align-center">
-<a href="https://shop.tarjeta-digital.site/envio" rel="noopener noreferrer" target="_blank"> <img src="https://i.ibb.co/G5zhJs6/La-solucio-n-de-envi-os-que-deseari-as-haber-tenido-siempre-Envi-a-y-rastrea-a-cualquier-parte-del-m.png"> </a>
+¡Sí, lo hacemos!<br><br>
+Realizamos envíos a todo el mundo.<br><br>
+En la mayoría de los casos, la entrega a domicilio en RD (República Dominicana) no tiene costo adicional (el envío es gratuito).<br><br>
+Para envíos internacionales, puedes contactar a nuestro equipo de soporte para obtener la mejor tarifa para la dirección de entrega.👇<br><br>
+WhatsApp: <a href="https://wa.me/18493523970" rel="noopener noreferrer" target="_blank">https://wa.me/18493523970</a><br>
+Correo electrónico: <a href="mailto:Soporte@tarjeta-digital.site" rel="noopener noreferrer" target="_blank">Soporte@tarjeta-digital.site</a><br><br>
+**se aplican ciertas restricciones.<br>
+Puedes consultar las tarifas de envío internacionales <a href="https://shop.tarjeta-digital.site/envio" rel="noopener noreferrer" target="_blank">aquí</a>.
 </div>
 
-<button class="faq-question" onclick="toggleFAQ(8)"><span class="tab-text">¿Formas de Pago y Política de Devolución ?</span><span class="dropdown-arrow">▼</span></button>
+<button class="faq-question" onclick="toggleFAQ(8)"><span class="tab-text">¿Cuáles son los Métodos de Pago y la Política de Devolución?</span><span class="dropdown-arrow">▼</span></button>
 <div class="faq-answer">
-<strong>Formas de Pago:</strong></div><br><div>Aceptamos las siguientes formas de pago:</div><div>1) <strong>PayPal.</strong></div><div>2) <strong>Transferencia o Depósito Bancario.</strong></div><div>3) <strong>Link de Pago por tarjeta de crédito.</strong></div><br><div><img src="https://s3.amazonaws.com/images.ecwid.com/images/wysiwyg/payment_instructions/29311384/1623938018263-248110874/icn_paypal_cards_list@2x_png"> <img src="https://i.ibb.co/HF5gVWx/checkout-payment-logo-BHD-LEON.png"></div><div>-&nbsp;</div><br><div><strong>Devoluciones:</strong></div><div>Ya que nuestros productos son 100% personalizados no podemos ofrecer una devolución de su dinero. Todas las ventas son finales.</div><div>-</div><div>En caso de no recibir tu pedido en un periodo máximo de 45 días se le estará produciendo y enviando una nueva tarjeta con un número de seguimiento.</div><div>-</div><div>¿Tienes más preguntas?</div><div>Escríbenos por <a href="https://wa.me/18493523970" target="_blank">WhatsApp</a>&nbsp;</div>
-
+<strong>Métodos de Pago:</strong><br><br>
+Aceptamos los siguientes métodos de pago:<br>
+1) <strong>PayPal.</strong><br>
+2) <strong>Transferencia o Depósito Bancario.</strong><br>
+3) <strong>Enlace de Pago con tarjeta de crédito.</strong><br><br>
+<img src="https://s3.amazonaws.com/images.ecwid.com/images/wysiwyg/payment_instructions/29311384/1623938018263-248110874/icn_paypal_cards_list@2x_png"> <img src="https://i.ibb.co/HF5gVWx/checkout-payment-logo-BHD-LEON.png"><br><br>
+<strong>Devoluciones:</strong><br><br>
+Dado que nuestros productos son 100% personalizados, no podemos ofrecer un reembolso de tu dinero. Todas las ventas son finales.<br>
+En caso de que no recibas tu pedido dentro de un máximo de 45 días, se producirá y enviará una nueva tarjeta con un número de seguimiento.<br><br>
+<a href="https://wa.me/18493523970" target="_blank">WhatsApp</a>
+</div>
 
 <button class="faq-question" onclick="toggleFAQ(9)"><span class="tab-text">¿Ofrecen Descuentos?</span><span class="dropdown-arrow">▼</span></button>
 <div class="faq-answer">
-Ofrecemos <strong>PAQUETES CORPORATIVOS</strong>. Se tratan de compras por mayor a 10 tarjetas digitales personalizadas y adaptadas a las necesidades de la marca o negocio.</div><div>-</div><div>Los descuentos se aplican de manera automática. Al agregar 10 tarjetas PVC Premium o Bambú ECO recibes un 30% de descuento y un 20% de descuento para las tarjetas de Metal Híbrido.</div><div>-</div><div>A veces tenemos promociones donde ofrecemos un descuento en la compra de nuestros productos. Debe tener un código de descuento para aplicar el ahorro.</div><div>-</div><div>Para mantenerte siempre actualizado sobre nuestras novedades, ofertas,&nbsp;promociones, eventos y actividades <strong>suscríbete a nuestro buzón de noticias <a href="Https://tarjeta-digital.site" rel="noopener noreferrer" target="_blank">aquí</a>.</strong></div><br><div><a href="https://tarjeta-digital.site/clubform" rel="noopener noreferrer" target="_blank"> </a>https://i.ibb.co/Qn2QYyB/Banners.png<a href="https://tarjeta-digital.site/clubform" rel="noopener noreferrer" target="_blank"> </a></div><div class="ql-align-center"><br></div>
+Ofrecemos <strong>PAQUETES CORPORATIVOS</strong>. Estas son compras al por mayor de 10 o más tarjetas digitales personalizadas adaptadas a las necesidades de la marca o negocio.<br><br>
+Los descuentos se aplican automáticamente. Al agregar 10 tarjetas Premium PVC o Bamboo ECO, recibes un 30% de descuento, y un 20% de descuento para las tarjetas Hybrid Metal.<br><br>
+A veces tenemos promociones donde ofrecemos un descuento en la compra de nuestros productos. Debes tener un código de descuento para aplicar el ahorro.<br><br>
+Para mantenerte actualizado sobre nuestras novedades, ofertas, promociones, eventos y actividades, <strong> suscríbete a nuestro boletín <a href="Https://tarjeta-digital.site" rel="noopener noreferrer" target="_blank">aquí</a>.</strong><br><br>
+<a href="https://tarjeta-digital.site/clubform" rel="noopener noreferrer" target="_blank">https://i.ibb.co/Qn2QYyB/Banners.png</a>
+</div>
 
-
-<button class="faq-question" onclick="toggleFAQ(10)"><span class="tab-text">¿En qué tiempo recibo mi tarjeta?</span><span class="dropdown-arrow">▼</span></button>
+<button class="faq-question" onclick="toggleFAQ(10)"><span class="tab-text">¿Cuánto tiempo tarda en llegar mi tarjeta?</span><span class="dropdown-arrow">▼</span></button>
 <div class="faq-answer">
-Cada tarjeta es 100% personalizada y pasa por un proceso producción:</div><br><ul><li>Aprobación del diseño,&nbsp;</li><li>Fabricación de la misma,&nbsp;</li><li>Programación,&nbsp;</li><li>Control de calidad,</li><li>Y por último envío.</li></ul><div>-</div><div>El tiempo de entrega puede durar de 10 hasta 15 días<strong> laborables</strong> dependiendo de la zona donde se encuentre, los procesos aduanales, etc.&nbsp;</div><div>-</div><div>⚠️ <strong>El tiempo de entrega se calcula después de la aprobación del diseño de la tarjeta.&nbsp;</strong></div><div>-</div><div>Su pedido esta <strong>GARANTIZADO! </strong></div><div>Si no le llega su pedido después de un máximo de 45 días le estaremos enviando un nuevo producto.</div><div>-</div><div>¿Tienes más preguntas?</div><div>Escríbenos&nbsp;por&nbsp;<a href="https://wa.me/18493523970" rel="noopener noreferrer" target="_blank">WhatsApp</a>&nbsp;</div><br><div class="ql-align-center">https://i.ibb.co/XsGSxBg/Banners-1.gif</div><div class="ql-align-center"><a href="https://shop.tarjeta-digital.site" rel="noopener noreferrer" target="_blank"> </a></div>
+Cada tarjeta es 100% personalizada y pasa por un proceso de producción:<br><br>
+1) Aprobación del diseño,<br>
+2) Fabricación,<br>
+3) Programación de la tarjeta,<br>
+4) Pruebas de calidad y empaquetado.<br><br>
+El tiempo total para este proceso es de aproximadamente 7 a 14 días hábiles. <br>
+Después de este período, el tiempo de envío dependerá de la ubicación del destinatario y el método de envío seleccionado. Por lo general, el envío estándar demora entre 7 y 21 días hábiles.<br><br>
+Si no has recibido tu pedido después de un tiempo razonable, no dudes en ponerte en contacto con nuestro equipo de soporte para obtener ayuda en el seguimiento de tu pedido y recibir actualizaciones necesarias.<br><br>
+<a href="https://wa.me/18493523970" rel="noopener noreferrer" target="_blank">WhatsApp</a><br><br>
+<a href="https://shop.tarjeta-digital.site" rel="noopener noreferrer" target="_blank">https://i.ibb.co/XsGSxBg/Banners-1.gif</a>
+</div>
 
-<button class="faq-question" onclick="toggleFAQ(11)"><span class="tab-text">¿Aún no has recibido tu pedido? Dónde está? ⚠️</span><span class="dropdown-arrow">▼</span></button>
+<button class="faq-question" onclick="toggleFAQ(11)"><span class="tab-text">¿Qué es una Tarjeta Digital NFC?</span><span class="dropdown-arrow">▼</span></button>
 <div class="faq-answer">
-Mi paquete está "<strong>En tránsito</strong>" durante bastante tiempo. ¿Cuál es la ubicación exacta?</div><br><div><strong>PARA ENVÍOS INTERNACIONALES</strong></div><br><div>Tenga en cuenta que el envío internacional lleva tiempo. Si el remitente no utilizó el correo rápido o el servicio urgente, un paquete/correo certificado o un paquete electrónico tomaría aproximadamente la misma cantidad de tiempo que los paquetes ordinarios; la única diferencia es que son rastreables y, por lo tanto, más seguros.</div><br><div>Para correos registrados, por lo general toma alrededor de 2-4 semanas para países en el extranjero y 1-3 semanas por método de envío ePacket, 1-3 semanas por EMS. También depende en gran medida del proceso de despacho de aduanas.</div><br><div><strong>¿Dónde está mi paquete? </strong>Pedí hace un mes!</div><br><div>Ver el plazo de entrega de Global Registered Airmail/ePacket (sin incluir áreas rurales)</div><br><div>Día 1-2 Aceptación/En Origen</div><div>Día 2-3 Salida de la oficina de cambio de salida/Exportación</div><div>Día 2-4 Pendiente de despacho de aduana/Exportación</div><div>¡Después de la exportación/salida, el estado del envío no se actualizará hasta que el paquete llegue a la siguiente ubicación!</div><br><div>Día 4-10 Llegada a la oficina de cambio de llegada/En Destino</div><div>Día 10-15 Pendiente de despacho de aduana/Importación</div><div>Día 15-30 Transporte nacional y entrega de última milla</div><div>Día 60 Si no se entrega con éxito, el paquete puede ser devuelto al remitente o el paquete se considerará perdido en ese momento.</div><br><div>Cuando su paquete llegue a su país, si está ansioso por recibir su pedido, puede intentar comunicarse con su transportista local para acelerar la entrega.</div>
-    
+Una Tarjeta Digital NFC es una versión digital de una tarjeta de presentación convencional, pero con tecnología NFC (Near Field Communication) incorporada.<br><br>
+Con esta tecnología, los usuarios pueden compartir fácilmente su información de contacto con otros dispositivos compatibles con NFC simplemente acercando su tarjeta a ellos.<br><br>
+Estas tarjetas digitales son una forma moderna y conveniente de intercambiar información de contacto, ya que eliminan la necesidad de llevar tarjetas físicas y son más respetuosas con el medio ambiente.<br><br>
+<a href="https://tarjeta-digital.site" rel="noopener noreferrer" target="_blank">https://tarjeta-digital.site</a>
+</div>
+
+<button class="faq-question" onclick="toggleFAQ(12)"><span class="tab-text">¿Cuál es el Material de las Tarjetas Digitales NFC?</span><span class="dropdown-arrow">▼</span></button>
+<div class="faq-answer">
+<strong>Nuestras tarjetas digitales NFC están disponibles en varios materiales de alta calidad:</strong><br><br>
+1) <strong>PVC Premium:</strong> resistente al agua y duradero.<br>
+2) <strong>Bamboo ECO:</strong> ecológico y sostenible.<br>
+3) <strong>Hybrid Metal:</strong> metal de alta calidad y durabilidad.<br><br>
+Cada material tiene sus propias características únicas y puede adaptarse a las necesidades y preferencias individuales del cliente.<br><br>
+Puedes explorar nuestra variedad de materiales y diseños en nuestro catálogo online: 👇<br>
+<a href="Https://shop.tarjeta-digital.site/catalogo" rel="noopener noreferrer" target="_blank">Https://shop.tarjeta-digital.site/catalogo</a>
+</div>
+
+<button class="faq-question" onclick="toggleFAQ(13)"><span class="tab-text">¿Cómo Funcionan las Tarjetas Digitales NFC?</span><span class="dropdown-arrow">▼</span></button>
+<div class="faq-answer">
+<strong>El funcionamiento de las tarjetas digitales NFC es bastante simple:</strong><br><br>
+1) La tarjeta contiene un chip NFC incorporado que almacena la información de contacto del usuario.<br>
+2) Cuando se acerca a un dispositivo compatible con NFC (como un smartphone), el chip NFC transmite la información de contacto al dispositivo.<br>
+3) El dispositivo receptor puede leer la información y guardarla automáticamente en los contactos del usuario o mostrarla para su revisión.<br><br>
+Este proceso es rápido, conveniente y no requiere ninguna aplicación adicional. Solo se necesita un dispositivo compatible con NFC para compartir y recibir información de contacto.
+</div>
+
+<button class="faq-question" onclick="toggleFAQ(14)"><span class="tab-text">¿Cómo Puedo Personalizar Mi Tarjeta Digital NFC?</span><span class="dropdown-arrow">▼</span></button>
+<div class="faq-answer">
+<strong>Personalizar tu tarjeta digital NFC es fácil y divertido:</strong><br><br>
+1) Elige el material de la tarjeta que mejor se adapte a tus necesidades y preferencias.<br>
+2) Envíanos tu información de contacto y cualquier diseño o logotipo que desees incluir en la tarjeta.<br>
+3) Nuestro equipo de diseño creará una maqueta personalizada para tu aprobación.<br>
+4) Una vez que apruebes el diseño, iniciaremos el proceso de producción de tu tarjeta digital NFC.<br><br>
+¡Es así de simple! Puedes tener una tarjeta única y profesional en poco tiempo.
+</div>
+
+<button class="faq-question" onclick="toggleFAQ(15)"><span class="tab-text">¿Qué Ventajas Ofrecen las Tarjetas Digitales NFC?</span><span class="dropdown-arrow">▼</span></button>
+<div class="faq-answer">
+<strong>Las tarjetas digitales NFC ofrecen una serie de ventajas sobre las tarjetas de presentación tradicionales:</strong><br><br>
+1) <strong>Conveniencia:</strong> Se pueden compartir fácilmente con solo tocar un dispositivo compatible.<br>
+2) <strong>Ecología:</strong> Reducen el consumo de papel y contribuyen a la conservación del medio ambiente.<br>
+3) <strong>Profesionalismo:</strong> Transmiten una imagen moderna y tecnológica de tu negocio o marca personal.<br>
+4) <strong>Personalización:</strong> Pueden incluir información multimedia, como enlaces a sitios web, videos o redes sociales.<br>
+5) <strong>Durabilidad:</strong> Los materiales de alta calidad garantizan que las tarjetas sean duraderas y resistentes al desgaste.<br><br>
+En resumen, las tarjetas digitales NFC son una herramienta poderosa para destacar y hacer crecer tu red de contactos de manera efectiva y moderna.
+</div>
+
     
 <!-- Repeat the pattern for the other questions -->
 </div>
